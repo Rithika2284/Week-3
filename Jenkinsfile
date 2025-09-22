@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
@@ -10,7 +9,6 @@ pipeline {
                 '''
             }
         }
-
         stage('Run') {
             steps {
                 echo 'Run application in Docker container'
@@ -21,7 +19,6 @@ pipeline {
             }
         }
     }
-
     post {
         failure {
             echo 'Pipeline failed. please check the logs.'
